@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 
 const carReviews = {
-  1: {brand: 'Dodge Challenger', model: 'SRT', placeholder: 'Placeholder for car 1', images: ['../src/assets/dodge.jpg', '../src/assets/dodge1.jpg', '../src/assets/dodge2.jpg', '../src/assets/dodge.jpg']},
-  2: {brand: 'Ford Mustang', model: 'GT500', placeholder: 'Placeholder for car 2', images: ['../src/assets/mustang.jpg', '../src/assets/mustang.jpg', '../src/assets/mustang.jpg']},
-  3: {brand: 'Chevrolet Camaro', model: 'ZL1', placeholder: 'Placeholder for car 3', images: ['../src/assets/chevrolet.jpg', '../src/assets/chevrolet.jpg', '../src/assets/chevrolet.jpg']},
-  4: {brand: 'Dodge Challenger', model: 'SRT', placeholder: 'Placeholder for car 1', images: ['../src/assets/dodge.jpg', '../src/assets/dodge1.jpg', '../src/assets/dodge2.jpg', '../src/assets/dodge.jpg']},
+  1: {brand: 'Dodge Challenger', model: 'SRT', placeholder: 'Placeholder for car 1', images: ['../public/dodge.jpg', '../public/dodge1.jpg', '../public/dodge2.jpg', '../public/dodge.jpg']},
+  2: {brand: 'Ford Mustang', model: 'GT500', placeholder: 'Placeholder for car 2', images: ['../public/mustang.jpg', '../public/mustang.jpg', '../public/mustang.jpg']},
+  3: {brand: 'Chevrolet Camaro', model: 'ZL1', placeholder: 'Placeholder for car 3', images: ['../public/chevrolet.jpg', '../public/chevrolet.jpg', '../public/chevrolet.jpg']},
+  4: {brand: 'Dodge Challenger', model: 'SRT', placeholder: 'Placeholder for car 1', images: ['../public/dodge.jpg', '../public/dodge1.jpg', '../public/dodge2.jpg', '../public/dodge.jpg']},
 }
 
 const CarReview = () => {

@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const cars = [
-  { id: 1, name: 'Dodge Challenger', img: './src/assets/dodge.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: false },
-  { id: 2, name: 'Ford Mustang', img: './src/assets/mustang.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: true },
-  { id: 3, name: 'Chevrolet Camaro', img: './src/assets/chevrolet.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: false },
-  { id: 4, name: 'Dodge Challenger', img: './src/assets/dodge2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: false },
+  { id: 1, name: 'Dodge Challenger', img: './public/dodge.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: false },
+  { id: 2, name: 'Ford Mustang', img: './public/mustang.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: true },
+  { id: 3, name: 'Chevrolet Camaro', img: './public/chevrolet.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: false },
+  { id: 4, name: 'Dodge Challenger', img: './public/dodge2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', soldOut: false },
 ];
 
 function CarCatalog() {
