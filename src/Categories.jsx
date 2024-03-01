@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 
 const categories = [
-    {id: 1, img: './src/assets/dodge.jpg', brand: 'Dodge'},
-    {id: 2, img: './src/assets/mustang.jpg', brand: 'Ford'},
-    {id: 3, img: './src/assets/chevrolet.jpg', brand: 'Chevrolet'},
+    {id: 1, img: '/dodge.jpg', brand: 'Dodge'},
+    {id: 2, img: '/mustang.jpg', brand: 'Ford'},
+    {id: 3, img: '/chevrolet.jpg', brand: 'Chevrolet'},
 ]
 
 function Categories(){
