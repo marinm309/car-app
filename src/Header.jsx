@@ -17,9 +17,9 @@ function Header(props){
                     </form>
                     <nav className="nav-menu">
                         <ul>
-                            <li><a href="#">Placeholder 1</a></li>
-                            <li><a href="#">Placeholder 2</a></li>
-                            <li><a href="#">Placeholder 3</a></li>
+                            <li><Link>Placeholder 1</Link></li>
+                            <li><Link>Placeholder 2</Link></li>
+                            <li><Link to={'/home2'}>Лили версия</Link></li>
                         </ul>
                     </nav>
                     <div className="burger-menu">

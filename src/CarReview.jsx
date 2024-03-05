@@ -3,10 +3,15 @@ import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 
 const carReviews = {
-  1: {brand: 'Dodge Challenger', model: 'SRT', placeholder: 'Placeholder for car 1', images: ['/dodge.jpg', '/dodge1.jpg', '/dodge2.jpg', '/dodge.jpg']},
-  2: {brand: 'Ford Mustang', model: 'GT500', placeholder: 'Placeholder for car 2', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
-  3: {brand: 'Chevrolet Camaro', model: 'ZL1', placeholder: 'Placeholder for car 3', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
-  4: {brand: 'Dodge Challenger', model: 'SRT', placeholder: 'Placeholder for car 1', images: ['/dodge.jpg', '/dodge1.jpg', '/dodge2.jpg', '/dodge.jpg']},
+  1: {brand: 'Mercedes', placeholder: 'Placeholder for car 1', images: ['/mercedes/DK Cars 1-1.jpg', '/mercedes/DK Cars 1-2.jpg', '/mercedes/DK Cars 1-1.jpg', '/mercedes/DK Cars 1-2.jpg']},
+  2: {brand: 'Cadillac', placeholder: 'Placeholder for car 2', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
+  3: {brand: 'Buick', placeholder: 'Placeholder for car 3', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
+  4: {brand: 'Mercedes', placeholder: 'Placeholder for car 4', images: ['/mercedes/DK Cars 3-1.jpg', '/mercedes/DK Cars 3-2.jpg', '/mercedes/DK Cars 3-1.jpg', '/mercedes/DK Cars 3-2.jpg']},
+  5: {brand: 'Cadillac', placeholder: 'Placeholder for car 5', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
+  6: {brand: 'Buick', placeholder: 'Placeholder for car 6', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
+  7: {brand: 'Mercedes', placeholder: 'Placeholder for car 7', images: ['/mercedes/DK Cars 6-1.jpg', '/mercedes/DK Cars 6-2.jpg', '/mercedes/DK Cars 6-1.jpg', '/mercedes/DK Cars 6-2.jpg']},
+  8: {brand: 'Cadillac', placeholder: 'Placeholder for car 8', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
+  9: {brand: 'Buick', placeholder: 'Placeholder for car 9', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
 }
 
 const CarReview = () => {
@@ -27,6 +32,7 @@ const CarReview = () => {
           showFullscreenButton={false}
           showPlayButton={false}
           items={images}
+          slideDuration={0}
         />
 
       </div>
