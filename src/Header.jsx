@@ -19,7 +19,7 @@ function Header(props){
                         <ul>
                             <li><Link>Placeholder 1</Link></li>
                             <li><Link>Placeholder 2</Link></li>
-                            <li><Link to={'/home2'}>Лили версия</Link></li>
+                            <li><Link to={'/home2'} style={{color: 'pink', fontWeight: 'bold', backgroundColor: 'grey', borderRadius: '10px', padding: '5px'}}>Лили версия</Link></li>
                         </ul>
                     </nav>
                     <div className="burger-menu">
