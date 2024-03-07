@@ -2,40 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const cars = [
-  { id: 1, name: 'Mercedes', img: '/mercedes/DK Cars 1-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 2, name: 'Cadillac', img: '/cadillac/DK Cars 14-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 3, name: 'Buick', img: '/buick/DK Cars 18-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 4, name: 'Mercedes', img: '/mercedes/DK Cars 3-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 5, name: 'Cadillac', img: '/cadillac/DK Cars 27-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 6, name: 'Buick', img: '/buick/DK Cars 39-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 7, name: 'Mercedes', img: '/mercedes/DK Cars 6-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 8, name: 'Cadillac', img: '/cadillac/DK Cars 28-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-  { id: 9, name: 'Buick', img: '/buick/DK Cars 45-1.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 1, name: 'Mercedes', img: '/mercedes/DK Cars 1-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 2, name: 'Cadillac', img: '/cadillac/DK Cars 14-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 3, name: 'Buick', img: '/buick/DK Cars 18-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 4, name: 'Mercedes', img: '/mercedes/DK Cars 3-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 5, name: 'Cadillac', img: '/cadillac/DK Cars 27-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 6, name: 'Buick', img: '/buick/DK Cars 39-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 7, name: 'Mercedes', img: '/mercedes/DK Cars 6-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 8, name: 'Cadillac', img: '/cadillac/DK Cars 28-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+  { id: 9, name: 'Buick', img: '/buick/DK Cars 45-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
 ];
 
 function CarCatalog() {
   return (
-    // <div>
-    //   <ul classNameName="catalog-container container">
-    //     {cars.map(car => (
-    //       <li key={car.id}>
-    //         <div classNameName="card">
-    //             <img src={car.img} alt="Card Image" />
-    //             <div classNameName="card-content">
-    //             <h3 classNameName="card-title">{car.name}</h3>
-    //             <p classNameName="card-text">{car.description}</p>
-    //             <Link classNameName={car.soldOut ? 'card-link-disabled' : 'card-link'} to={`/car/${car.id}`}>Read More</Link>
-    //             {/* {car.soldOut ? <span classNameName="sold-out">Sold Out</span> : undefined} */}
-    //             </div>
-    //         </div>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
-
     <>
       <ul className="catalog-container container">
-        {cars.map(car => (
+        {/* {cars.map(car => (
           <li key={car.id}>
           <Link to={`/car/${car.id}`}>
           <div>
@@ -52,7 +34,25 @@ function CarCatalog() {
           </div>
           </Link>
       </li>
-        ))}
+        ))} */}
+
+    <li>
+          <Link to={`/car/${1}`}>
+          <div>
+              <article className="card">
+                  <header className="card__thumb">
+                      <img src={'/mercedes/DK Cars 1-2.jpg'}/>
+                  </header>
+                  <div className="card__body">
+                      <h2 className="card__title">{'1998, w140, s600'}</h2>
+                      <div className="card__subtitle">{'60 000km, v12'}</div>
+                      <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur laboriosam ratione quisquam impedit ipsum! Repellat harum, nemo maxime distinctio aspernatur vitae suscipit, repellendus et quaerat nobis ut fugit quo totam?</p>
+                  </div>
+              </article>
+          </div>
+          </Link>
+      </li>
+
       </ul>
     </>
   );

@@ -29,7 +29,7 @@ const CarReview = () => {
       <div className="container mx-auto px-4">
         <ReactImageGallery
           showBullets={false}
-          showFullscreenButton={false}
+          showFullscreenButton={true}
           showPlayButton={false}
           items={images}
           slideDuration={0}

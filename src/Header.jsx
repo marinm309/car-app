@@ -9,22 +9,23 @@ function Header(props){
             <div className="whole-nav-container">
                 <div className="container">
                     <div className="logo"><Link to={'/'}>Logo</Link></div>
-                    <form className="search-form" action="#" method="GET">
+                    <h4><u>Събрани на едно място автомобили за познавачи и ценители!</u></h4>
+                    {/* <form className="search-form" action="#" method="GET">
                         <div className="search-bar">
                             <input type="text" name="search" placeholder="Search..." />
                             <button type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                         </div>
-                    </form>
-                    <nav className="nav-menu">
+                    </form> */}
+                    {/* <nav className="nav-menu">
                         <ul>
                             <li><Link>Placeholder 1</Link></li>
                             <li><Link>Placeholder 2</Link></li>
                             <li><Link to={'/home2'} style={{color: 'pink', fontWeight: 'bold', backgroundColor: 'grey', borderRadius: '10px', padding: '5px'}}>Лили версия</Link></li>
                         </ul>
-                    </nav>
-                    <div className="burger-menu">
+                    </nav> */}
+                    {/* <div className="burger-menu">
                         <FontAwesomeIcon icon={faBars} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </header>
