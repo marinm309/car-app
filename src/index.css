@@ -425,13 +425,14 @@ nav ul li a:hover {
 }
 
 .card__description {
+  color: coral;
   position: absolute;
   left: 20px;
   right: 20px;
   bottom: 56px;
   margin: 0;
   padding: 0;
-  color: #666C74;
+  /* color: #666C74; */
   line-height: 27px;
   opacity: 0;
   -webkit-transform: translateY(45px);
@@ -507,6 +508,10 @@ nav ul li a:hover {
 .items {
   padding-left: 20px;
   letter-spacing: 3px;
+}
+
+.items .new{
+  color: coral;
 }
 
 .head {

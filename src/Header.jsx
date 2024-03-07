@@ -9,7 +9,7 @@ function Header(props){
             <div className="whole-nav-container">
                 <div className="container">
                     <div className="logo"><Link to={'/'}>Logo</Link></div>
-                    <h4><u>Събрани на едно място автомобили за познавачи и ценители!</u></h4>
+                    <h4><i><b>Събрани на едно място автомобили за познавачи и ценители!</b></i></h4>
                     {/* <form className="search-form" action="#" method="GET">
                         <div className="search-bar">
                             <input type="text" name="search" placeholder="Search..." />

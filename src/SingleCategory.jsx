@@ -52,7 +52,7 @@ function SingleCategory(){
                   <div className="card__body">
                       <h2 className="card__title">{'1998, w140, s600'}</h2>
                       <div className="card__subtitle">{'60 000km, v12'}</div>
-                      <p className="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur laboriosam ratione quisquam impedit ipsum! Repellat harum, nemo maxime distinctio aspernatur vitae suscipit, repellendus et quaerat nobis ut fugit quo totam?</p>
+                      {/* <p className="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur laboriosam ratione quisquam impedit ipsum! Repellat harum, nemo maxime distinctio aspernatur vitae suscipit, repellendus et quaerat nobis ut fugit quo totam?</p> */}
                   </div>
               </article>
           </div>
@@ -68,8 +68,8 @@ function SingleCategory(){
                   </header>
                   <div className="card__body">
                       <h2 className="card__title">{'1998, w140, s600'}</h2>
-                      <div className="card__subtitle">{'60 000km, v12'}</div>
-                      <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur laboriosam ratione quisquam impedit ipsum! Repellat harum, nemo maxime distinctio aspernatur vitae suscipit, repellendus et quaerat nobis ut fugit quo totam?</p>
+                      {/* <div className="card__subtitle">{'60 000km, v12'}</div> */}
+                      <p className="card__description">{'60 000km, v12'}</p>
                   </div>
               </article>
           </div>
@@ -86,17 +86,17 @@ function SingleCategory(){
   <div class="overlay">
     <div class = "items"></div>
     <div class = "items head">
-      <p>Flower Embroidery Hoop Art</p>
+      <p>{'1998, w140, s600'}</p>
       <hr/>
     </div>
     <div class = "items price">
-      <p class="old">$699</p>
-      <p class="new">$345</p>
+      {/* <p class="old">$699</p> */}
+      <p class="new">{'60 000km, v12'}</p>
     </div>
-    <div class="items cart">
+    {/* <div class="items cart">
       <i class="fa fa-shopping-cart"></i>
       <span>ADD TO CART</span>
-  </div>
+  </div> */}
 </div>
 </div>
           </div>
