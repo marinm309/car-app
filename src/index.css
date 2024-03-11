@@ -21,6 +21,19 @@ li{
   height: 100%;
 }
 
+header{
+  height: 6%;
+}
+
+footer{
+  height: 4%;
+  justify-content: center;
+}
+
+footer p{
+  margin: 0;
+}
+
 .whole-nav-container{
   margin-bottom: 30px;
   width: 100%;
@@ -237,6 +250,7 @@ nav ul li a:hover {
 }
 
 .categories {
+  height: 90%;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -653,13 +667,12 @@ nav ul li a:hover {
     gap: 7px;
     justify-content: unset;
     padding: 7px;
-    height: 100vh;
     flex-wrap: unset;
   }
 
   .categories a {
     width: 83%;
-    height: 29%;
+    height: 33%;
   }
 
   .categories h2{
