@@ -367,7 +367,7 @@ nav ul li a:hover {
 .card__body {
   position: relative;
   height: 185px;
-  padding: 20px;
+  padding: 10px;
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
