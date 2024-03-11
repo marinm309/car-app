@@ -26,7 +26,7 @@ header{
 }
 
 footer{
-  height: 8%;
+  height: 6%;
   justify-content: center;
 }
 
@@ -124,7 +124,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
