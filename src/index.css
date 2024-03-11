@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #eee;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
 }
 
@@ -17,16 +17,16 @@ li{
   list-style: none;
 }
 
-#root, #root div{
+/* #root, #root div{
   height: 100%;
-}
+} */
 
 header{
   height: 6%;
 }
 
 footer{
-  height: 4%;
+  height: 8%;
   justify-content: center;
 }
 
@@ -250,7 +250,7 @@ nav ul li a:hover {
 }
 
 .categories {
-  height: 90%;
+  height: 86%;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -666,7 +666,6 @@ nav ul li a:hover {
     flex-direction: column;
     gap: 7px;
     justify-content: unset;
-    padding: 7px;
     flex-wrap: unset;
   }
 
