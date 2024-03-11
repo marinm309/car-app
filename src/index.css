@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #eee;
+  height: 100vh;
+  overflow: hidden;
 }
 
 a{
@@ -13,6 +15,10 @@ a{
 
 li{
   list-style: none;
+}
+
+#root, #root div{
+  height: 100%;
 }
 
 .whole-nav-container{
@@ -105,7 +111,9 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-container a{
@@ -159,7 +167,6 @@ nav ul li a:hover {
 
 .card {
   position: relative;
-  /* width: 450px; */
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
@@ -229,49 +236,7 @@ nav ul li a:hover {
   font-size: 12px;
 }
 
-/* .card {
-  &::before,
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: opacity .38s ease-in-out, transform .35s ease-in-out;
-    content: '';
-    opacity: 0;
-    pointer-events: none;
-    border-radius: 10px;
-  }
-
-  &::before {
-    transform: scale3d(0, 1, 1);
-    transform-origin: left top;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    border-radius: 10px;
-  }
-
-  &::after {
-    transform: scale3d(1, 0, 1);
-    transform-origin: right top;
-    border-right: 1px solid #000000;
-    border-left: 1px solid #000000;
-    border-radius: 10px;
-  }
-
-  &:hover,
-  &:focus {
-    &::before,
-    &::after {
-      transform: scale3d(1, 1, 1);
-      opacity: 1;
-    }
-  }
-} */
-
 .categories {
-  margin-bottom: 20px;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
@@ -293,7 +258,7 @@ nav ul li a:hover {
 }
 
 .categories a {
-  width: 42%;
+  width: 35%;
 }
 
 .categories h2{
@@ -304,7 +269,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 5px;
 }
 
@@ -657,7 +622,13 @@ nav ul li a:hover {
   transition: all 0.3s;
 }
 
+.header-msg-1{
+  display: block;
+}
 
+.header-msg-2{
+  display: none;
+}
 
 
 
@@ -669,6 +640,47 @@ nav ul li a:hover {
 @media only screen and (max-width: 1300px) {
   .footer-container div {
     min-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .whole-nav-container{
+    margin-bottom: 5px;
+  }
+
+  .categories{
+    flex-direction: column;
+    gap: 7px;
+    justify-content: unset;
+    padding: 7px;
+    height: 100vh;
+    flex-wrap: unset;
+  }
+
+  .categories a {
+    width: 83%;
+    height: 29%;
+  }
+
+  .categories h2{
+    font-size: 18px;
+  }
+
+  .categories img{
+    height: 90%;
+    object-fit: cover;
+  }
+
+  .header-msg-2{
+    display: block;
+  }
+
+  .header-msg-1{
+    display: none;
+  }
+
+  .footer-container{
+    padding: 7px;
   }
 }
 
@@ -730,9 +742,5 @@ nav ul li a:hover {
 
   .catalog-container{
     gap: unset;
-  }
-
-  .categories {
-    gap: 5px;
   }
 }
