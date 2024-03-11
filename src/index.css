@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #eee;
+  height: 100vh;
 }
 
 a{
@@ -15,9 +16,9 @@ li{
   list-style: none;
 }
 
-/* #root, #root div{
+#root, #root div{
   height: 100%;
-} */
+}
 
 header{
   height: 6%;
@@ -275,6 +276,7 @@ nav ul li a:hover {
 
 .categories h2{
   margin: 0;
+  padding-bottom: 5px;
 }
 
 .category img {
@@ -282,7 +284,6 @@ nav ul li a:hover {
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
-  margin-bottom: 5px;
 }
 
 .category:hover{
