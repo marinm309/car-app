@@ -169,6 +169,8 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  padding-bottom: 50px;
+  justify-content: start;
 }
 
 .catalog-container li{
@@ -272,7 +274,7 @@ nav ul li a:hover {
 }
 
 .categories a {
-  width: 35%;
+  width: 40%;
 }
 
 .categories h2{
@@ -658,8 +660,23 @@ nav ul li a:hover {
 }
 
 @media only screen and (max-width: 1199px) {
+  .categories a {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .single-car-review{
+    display: flex;
+    flex-direction: column;
+  }
+
   .whole-nav-container{
     margin-bottom: 5px;
+  }
+
+  .catalog-container li{
+    width: 100%;
   }
 
   .categories{
@@ -693,13 +710,6 @@ nav ul li a:hover {
 
   .footer-container{
     padding: 7px;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .single-car-review{
-    display: flex;
-    flex-direction: column;
   }
 }
 

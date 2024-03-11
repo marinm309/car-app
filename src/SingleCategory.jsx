@@ -21,7 +21,6 @@ function SingleCategory(){
     const filteredCars = cars.filter(car => car.name.toLowerCase() == carCategory)
 
     return (
-        <div>
           <ul className="catalog-container container">
             {filteredCars.map(car => (
                 <li key={car.id}>
@@ -40,25 +39,7 @@ function SingleCategory(){
                     </Link>
                 </li>
             ))}
-
-        {/* <li>
-          <Link to={`/car/${1}`}>
-          <div>
-              <article className="card card1">
-                  <header className="card__thumb">
-                      <img src={'/mercedes/DK Cars 1-2.jpg'}/>
-                  </header>
-                  <div className="card__body">
-                      <h2 className="card__title">{'1998, w140, s600'}</h2>
-                      <div className="card__subtitle">{'60 000km, v12'}</div>
-                  </div>
-              </article>
-          </div>
-          </Link>
-      </li> */}
-
           </ul>
-        </div>
       );
 }
 
