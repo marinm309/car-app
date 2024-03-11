@@ -26,7 +26,7 @@ function SingleCategory(){
                 <li key={car.id}>
                     <Link to={`/car/${car.id}`}>
                     <div>
-                        <article className="card card1">
+                        <article className="card">
                             <header className="card__thumb">
                                 <img src={car.img}/>
                             </header>
