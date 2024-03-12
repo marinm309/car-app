@@ -23,6 +23,7 @@ li{
 
 header{
   height: 6%;
+  margin-bottom: 10px;
 }
 
 footer{
@@ -38,9 +39,9 @@ footer p{
   margin-bottom: 30px;
   width: 100%;
   background-color: #fff;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
 }
 
 .whole-nav-container h4{
