@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom';
 
 const ContactForm = () => {
   const {
@@ -71,6 +72,7 @@ const ContactForm = () => {
 
   return (
     <div className='ContactForm'>
+    <h2><b>КОНТАКТИ</b></h2>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center'>
@@ -169,14 +171,16 @@ const ContactForm = () => {
                     )}
                   </div>
                 </div>
-
-                <button
-                  className='submit-btn btn btn-primary'
-                  disabled={disabled}
-                  type='submit'
-                >
-                  Submit
-                </button>
+                <div className="form-buttons-container">
+                  <button
+                    className='submit-btn btn btn-primary'
+                    disabled={disabled}
+                    type='submit'
+                  >
+                    Submit
+                  </button>
+                  <Link to={'/'}><u><i>Начало</i></u></Link>
+                </div>
               </form>
             </div>
           </div>

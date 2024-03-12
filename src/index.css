@@ -250,6 +250,46 @@ nav ul li a:hover {
   display: none;
 }
 
+form {
+  margin-top: 20px;
+}
+
+.ContactForm{
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formRow {
+  margin: 10px 0 20px 0;
+}
+
+.formInput {
+  padding: 15px 10px;
+}
+
+.errorMessage {
+  color: #f45532;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.submit-btn {
+  padding: 15px 50px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.form-buttons-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 1300px) {
   .footer-container div {
     min-width: 50%;
@@ -339,5 +379,10 @@ nav ul li a:hover {
 @media only screen and (max-width: 768px) {
   .catalog-container li{
     width: 100%;
+  }
+
+  .submit-message {
+    width: 125px;
+    margin-left: 200px;
   }
 }
