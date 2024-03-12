@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram, faFacebook, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Footer(){
 
+    const location = useLocation();
+
     return(
         <>
-            <footer className="footer-container">
-                <p>При интерес, моля свържете се с нас <Link>тук</Link></p>
-            </footer>
+            {!location.pathname.includes('contact') ? <footer className="footer-container">
+                <p>При интерес, моля свържете се с нас <Link to={'/contact'}>тук</Link></p>
+            </footer> : undefined}
         </>
     )
 
