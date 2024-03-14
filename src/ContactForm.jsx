@@ -72,7 +72,7 @@ const ContactForm = () => {
 
   return (
     <div className='ContactForm'>
-    <h2><b>КОНТАКТИ</b></h2>
+    <h2><b>ПОПЪЛНЕТЕ ДАННИТЕ И НИЕ ЩЕ СЕ СВЪРЖЕМ С ВАС</b></h2>
       <div className='container'>
         <div className='row'>
           <div className='col-12 text-center'>
@@ -84,22 +84,22 @@ const ContactForm = () => {
               >
                 {/* Row 1 of form */}
                 <div className='row formRow'>
-                  <div className='col-6'>
+                  <div className='col'>
                     <input
                       type='text'
                       name='name'
                       {...register('name', {
                         required: {
                           value: true,
-                          message: 'Please enter your name',
+                          message: 'Моля въведете име',
                         },
                         maxLength: {
                           value: 30,
-                          message: 'Please use 30 characters or less',
+                          message: 'Моля използвайте до 30 символа',
                         },
                       })}
                       className='form-control formInput'
-                      placeholder='Name'
+                      placeholder='Име'
                     ></input>
                     {errors.name && (
                       <span className='errorMessage'>
@@ -107,25 +107,27 @@ const ContactForm = () => {
                       </span>
                     )}
                   </div>
-                  <div className='col-6'>
-                    <input
-                      type='email'
-                      name='email'
-                      {...register('email', {
-                        required: true,
-                        pattern:
-                          /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                      })}
-                      className='form-control formInput'
-                      placeholder='Email address'
-                    ></input>
-                    {errors.email && (
-                      <span className='errorMessage'>
-                        Please enter a valid email address
-                      </span>
-                    )}
-                  </div>
                 </div>
+                <div className="row formRow">
+                  <div className='col'>
+                      <input
+                        type='email'
+                        name='email'
+                        {...register('email', {
+                          required: true,
+                          pattern:
+                            /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                        })}
+                        className='form-control formInput'
+                        placeholder='Email address'
+                      ></input>
+                      {errors.email && (
+                        <span className='errorMessage'>
+                          Please enter a valid email address
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 {/* Row 2 of form */}
                 <div className='row formRow'>
                   <div className='col'>
