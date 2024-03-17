@@ -300,6 +300,8 @@ form {
 
 .ContactForm h2{
   text-align: center;
+  margin: 0;
+  margin-top: 5px;
 }
 
 .image-gallery-thumbnails-container{
