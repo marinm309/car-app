@@ -57,11 +57,11 @@ const ContactForm = () => {
       );
 
       // Display success alert
-      toggleAlert('Form submission was successful!', 'success');
+      toggleAlert('Формата беше изпратена успешно!', 'success');
     } catch (e) {
       console.error(e);
       // Display error alert
-      toggleAlert('Uh oh. Something went wrong.', 'danger');
+      toggleAlert('Възникна проблем при изпращането на формата, моля опитайте отново', 'danger');
     } finally {
       // Re-enable form submission
       setDisabled(false);
@@ -71,9 +71,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='ContactForm'>
+    <div className='ContactForm container'>
     <h2><b>ПОПЪЛНЕТЕ ДАННИТЕ И НИЕ ЩЕ СЕ СВЪРЖЕМ С ВАС</b></h2>
-      <div className='container'>
+      <div className='contactForm-wrapper'>
         <div className='row'>
           <div className='col-12 text-center'>
             <div className='contactForm'>
@@ -111,19 +111,24 @@ const ContactForm = () => {
                 <div className="row formRow">
                   <div className='col'>
                       <input
-                        type='email'
+                        type='text'
                         name='email'
                         {...register('email', {
-                          required: true,
-                          pattern:
-                            /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                          required: {
+                            value: true,
+                            message: 'Моля въведете имейл или телефонен номер',
+                          },
+                          maxLength: {
+                            value: 30,
+                            message: 'Моля използвайте до 30 символа',
+                          },
                         })}
                         className='form-control formInput'
-                        placeholder='Email address'
+                        placeholder='Имейл/Телефонен номер'
                       ></input>
                       {errors.email && (
                         <span className='errorMessage'>
-                          Please enter a valid email address
+                          {errors.email.message}
                         </span>
                       )}
                     </div>
@@ -132,20 +137,20 @@ const ContactForm = () => {
                 <div className='row formRow'>
                   <div className='col'>
                     <input
-                      type='text'
+                      type='number'
                       name='subject'
                       {...register('subject', {
                         required: {
                           value: true,
-                          message: 'Please enter a subject',
+                          message: 'Моля посочете номер на кола',
                         },
                         maxLength: {
-                          value: 75,
-                          message: 'Subject cannot exceed 75 characters',
+                          value: 5,
+                          message: 'Моля използвайте до 5 символа',
                         },
                       })}
                       className='form-control formInput'
-                      placeholder='Subject'
+                      placeholder='Моля посочете номер на кола'
                     ></input>
                     {errors.subject && (
                       <span className='errorMessage'>
@@ -161,14 +166,17 @@ const ContactForm = () => {
                       rows={3}
                       name='message'
                       {...register('message', {
-                        required: true,
+                        maxLength: {
+                          value: 100,
+                          message: 'Моля използвайте до 100 символа',
+                        },
                       })}
                       className='form-control formInput'
-                      placeholder='Message'
+                      placeholder='Моля добавете въпрос, ако имате'
                     ></textarea>
                     {errors.message && (
                       <span className='errorMessage'>
-                        Please enter a message
+                        {errors.message.message}
                       </span>
                     )}
                   </div>
@@ -179,7 +187,7 @@ const ContactForm = () => {
                     disabled={disabled}
                     type='submit'
                   >
-                    Submit
+                    Изпрати
                   </button>
                   <Link to={'/'}><u><i>Начало</i></u></Link>
                 </div>

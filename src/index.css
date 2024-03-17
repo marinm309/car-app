@@ -309,6 +309,10 @@ form {
   justify-content: center;
 }
 
+.contactForm-wrapper{
+  width: 40%;
+}
+
 @media only screen and (max-width: 1300px) {
   .footer-container div {
     min-width: 50%;
@@ -322,6 +326,10 @@ form {
 
   .image-gallery-thumbnail{
     width: 19%;
+  }
+
+  .contactForm-wrapper{
+    width: 60%;
   }
 }
 
@@ -384,12 +392,6 @@ form {
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .footer-container div {
-    min-width: 100%;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .mx-auto{
     padding-left: 0 !important;
@@ -407,5 +409,19 @@ form {
   .submit-message {
     width: 125px;
     margin-left: 200px;
+  }
+
+  .contactForm-wrapper{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer-container div {
+    min-width: 100%;
+  }
+
+  .contactForm-wrapper{
+    width: 100%;
   }
 }
