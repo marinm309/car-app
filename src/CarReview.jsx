@@ -4,7 +4,7 @@ import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
 
 const carReviews = {
-  1: {brand: 'Mercedes', placeholder: 'Placeholder for car 1', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
+  1: carInfo['1'],
   2: {brand: 'Cadillac', placeholder: 'Placeholder for car 2', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
   3: {brand: 'Buick', placeholder: 'Placeholder for car 3', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
   4: {brand: 'Mercedes', placeholder: 'Placeholder for car 4', images: ['/mercedes/DK Cars 3-1.jpg', '/mercedes/DK Cars 3-2.jpg', '/mercedes/DK Cars 3-1.jpg', '/mercedes/DK Cars 3-2.jpg']},

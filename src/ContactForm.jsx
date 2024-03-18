@@ -91,11 +91,11 @@ const ContactForm = () => {
                       {...register('name', {
                         required: {
                           value: true,
-                          message: 'Моля въведете име',
+                          message: 'Моля, въведете име',
                         },
                         maxLength: {
                           value: 30,
-                          message: 'Моля използвайте до 30 символа',
+                          message: 'Моля, използвайте до 30 символа',
                         },
                       })}
                       className='form-control formInput'
@@ -116,11 +116,11 @@ const ContactForm = () => {
                         {...register('email', {
                           required: {
                             value: true,
-                            message: 'Моля въведете имейл или телефонен номер',
+                            message: 'Моля, въведете имейл или телефонен номер',
                           },
                           maxLength: {
                             value: 30,
-                            message: 'Моля използвайте до 30 символа',
+                            message: 'Моля, използвайте до 30 символа',
                           },
                         })}
                         className='form-control formInput'
@@ -142,15 +142,15 @@ const ContactForm = () => {
                       {...register('subject', {
                         required: {
                           value: true,
-                          message: 'Моля посочете номер на кола',
+                          message: 'Моля, посочете номер на кола',
                         },
                         maxLength: {
                           value: 5,
-                          message: 'Моля използвайте до 5 символа',
+                          message: 'Моля, използвайте до 5 символа',
                         },
                       })}
                       className='form-control formInput'
-                      placeholder='Моля посочете номер на кола'
+                      placeholder='Моля, посочете номер на кола'
                     ></input>
                     {errors.subject && (
                       <span className='errorMessage'>
@@ -168,11 +168,11 @@ const ContactForm = () => {
                       {...register('message', {
                         maxLength: {
                           value: 100,
-                          message: 'Моля използвайте до 100 символа',
+                          message: 'Моля, използвайте до 100 символа',
                         },
                       })}
                       className='form-control formInput'
-                      placeholder='Моля добавете въпрос, ако имате'
+                      placeholder='Моля, добавете въпрос, ако имате'
                     ></textarea>
                     {errors.message && (
                       <span className='errorMessage'>

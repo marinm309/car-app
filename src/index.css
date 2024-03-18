@@ -304,12 +304,12 @@ form {
   margin-top: 5px;
 }
 
-.image-gallery-thumbnails-container{
+/* .image-gallery-thumbnails-container{
   flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .contactForm-wrapper{
   width: 40%;
