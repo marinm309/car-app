@@ -5,14 +5,14 @@ import carInfo from './carInfo';
 
 const carReviews = {
   1: carInfo['1'],
-  2: {brand: 'Cadillac', placeholder: 'Placeholder for car 2', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
-  3: {brand: 'Buick', placeholder: 'Placeholder for car 3', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
-  4: {brand: 'Mercedes', placeholder: 'Placeholder for car 4', images: ['/mercedes/DK Cars 3-1.jpg', '/mercedes/DK Cars 3-2.jpg', '/mercedes/DK Cars 3-1.jpg', '/mercedes/DK Cars 3-2.jpg']},
-  5: {brand: 'Cadillac', placeholder: 'Placeholder for car 5', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
-  6: {brand: 'Buick', placeholder: 'Placeholder for car 6', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
-  7: {brand: 'Mercedes', placeholder: 'Placeholder for car 7', images: ['/mercedes/DK Cars 6-1.jpg', '/mercedes/DK Cars 6-2.jpg', '/mercedes/DK Cars 6-1.jpg', '/mercedes/DK Cars 6-2.jpg']},
-  8: {brand: 'Cadillac', placeholder: 'Placeholder for car 8', images: ['/mustang.jpg', '/mustang.jpg', '/mustang.jpg']},
-  9: {brand: 'Buick', placeholder: 'Placeholder for car 9', images: ['/chevrolet.jpg', '/chevrolet.jpg', '/chevrolet.jpg']},
+  2: carInfo['2'],
+  3: carInfo['3'],
+  4: carInfo['4'],
+  5: carInfo['5'],
+  6: carInfo['6'],
+  7: carInfo['7'],
+  8: carInfo['8'],
+  9: carInfo['9'],
 }
 const CarReview = () => {
 

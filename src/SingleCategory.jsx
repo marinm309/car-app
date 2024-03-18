@@ -3,15 +3,15 @@ import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom';
 
 const cars = [
-    { id: 1, name: 'Mercedes', img: '/mercedes/DK Cars 1-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 2, name: 'Cadillac', img: '/cadillac/DK Cars 14-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 3, name: 'Buick', img: '/buick/DK Cars 18-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 4, name: 'Mercedes', img: '/mercedes/DK Cars 3-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 5, name: 'Cadillac', img: '/cadillac/DK Cars 27-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 6, name: 'Buick', img: '/buick/DK Cars 39-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 7, name: 'Mercedes', img: '/mercedes/DK Cars 6-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 8, name: 'Cadillac', img: '/cadillac/DK Cars 28-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
-    { id: 9, name: 'Buick', img: '/buick/DK Cars 45-2.jpg', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 1, name: 'Mercedes', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/1/DK+Cars+${1}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 2, name: 'Cadillac', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/14/DK+Cars+${14}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 3, name: 'Buick', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/18/DK+Cars+${18}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 4, name: 'Mercedes', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/3/DK+Cars+${3}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 5, name: 'Cadillac', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/27/DK+Cars+${27}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 6, name: 'Buick', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/39/DK+Cars+${39}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 7, name: 'Mercedes', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/6/DK+Cars+${6}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 8, name: 'Cadillac', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/28/DK+Cars+${28}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
+    { id: 9, name: 'Buick', img: `https://dk-car-app.s3.eu-central-1.amazonaws.com/45/DK+Cars+${45}-${2}.jpg`, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry' },
   ];
 
 
