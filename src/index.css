@@ -450,6 +450,10 @@ form {
 }
 
 @media only screen and (max-width: 768px) {
+  .categories h2{
+    font-size: 15px;
+  }
+
   .catalog-container li{
     width: 100%;
   }
