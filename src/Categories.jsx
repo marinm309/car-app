@@ -10,7 +10,7 @@ const categories = [
 function Categories(){
     return(
         <>
-          <section className="categories container">
+          <section className="categories container" style={{'overflow': 'hidden'}}>
                 {categories.map(category => (
                     <Link key={category.id} to={`/category/${category.brand.toLowerCase().split('/')[0]}`}>
                         <div className="category">
