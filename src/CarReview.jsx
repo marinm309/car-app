@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
@@ -24,7 +24,36 @@ const CarReview = () => {
     document.querySelector('.image-gallery-fullscreen-button').click()
   };
   
-  // const { zoomIn, zoomOut, resetTransform } = useControls();
+  const [startPosition, setStartPosition] = useState(null);
+
+  const handleMouseDown = (event) => {
+    setStartPosition({
+      x: event.clientX,
+      y: event.clientY
+    });
+  };
+
+  const handleMouseUp = (event) => {
+    if (startPosition) {
+      const endPosition = {
+        x: event.clientX,
+        y: event.clientY
+      };
+
+      const distance = Math.sqrt(
+        Math.pow(endPosition.x - startPosition.x, 2) +
+        Math.pow(endPosition.y - startPosition.y, 2)
+      );
+
+      if (distance <= 4) {
+        document.querySelector('.image-gallery-fullscreen-button').click()
+      }
+
+      setStartPosition(null);
+    }
+  };
+    // const { zoomIn, zoomOut, resetTransform } = useControls();
+  
 
   return (
     
@@ -38,21 +67,24 @@ const CarReview = () => {
           items={images}
           slideDuration={0}
           renderItem={(item) => (
-            <TransformWrapper 
-            disablePadding={true}
-            smooth={true}
-            panning={{
-                velocityDisabled: true
-            }}
-            wheel={{
-              smoothStep: 0.005,
-              step: 1
-            }}
-            >
-              <TransformComponent>
-                <img src={item.original} />
-              </TransformComponent>
-            </TransformWrapper>
+            <div onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+              <TransformWrapper
+              disablePadding={true}
+              smooth={true}
+              panning={{
+                  velocityDisabled: true
+              }}
+              wheel={{
+                smoothStep: 0.005,
+                step: 1
+              }}
+              >
+                
+                <TransformComponent>
+                  <img src={item.original} />
+                </TransformComponent>
+              </TransformWrapper>
+            </div>
           )}
         />
 
