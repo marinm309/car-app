@@ -9,9 +9,32 @@ import ContactForm from './ContactForm';
 
 function App() {
 
-  document.addEventListener('touchmove', function(e) {
-    e.preventDefault();
+// Check if the user agent indicates an iPhone
+var isiPhone = /iPhone/i.test(navigator.userAgent);
+
+// If the user is on an iPhone, prevent overscrolling
+if (isiPhone) {
+  var lastScrollTop = 0;
+
+  document.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight;
+    var clientHeight = document.documentElement.clientHeight;
+
+    // If scrolling down and at the bottom, prevent default
+    if (scrollTop > lastScrollTop && scrollTop + clientHeight >= scrollHeight) {
+      window.scrollTo(0, scrollHeight - clientHeight);
+    }
+    // If scrolling up and at the top, prevent default
+    else if (scrollTop < lastScrollTop && scrollTop <= 0) {
+      window.scrollTo(0, 0);
+    }
+
+    lastScrollTop = scrollTop;
   }, { passive: false });
+}
+
+
 
   return (
     <Router>
