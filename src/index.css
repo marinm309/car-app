@@ -8,6 +8,10 @@ body {
   overflow: -moz-hidden-unscrollable;
 }
 
+html, body {
+  overscroll-behavior-y: none;
+}
+
 a{
   text-decoration: none;
   color: black
