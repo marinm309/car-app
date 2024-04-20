@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
@@ -20,8 +20,10 @@ const CarReview = () => {
       thumbnail: carInfo.images[index]
     }))
 
-  const onClickHandler = () => {
-    document.querySelector('.image-gallery-fullscreen-button').click()
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const handleFullScreenChange = () => {
+    setIsFullScreen(document.fullscreenElement !== null);
   };
   
   const [startPosition, setStartPosition] = useState(null);
@@ -46,20 +48,39 @@ const CarReview = () => {
       );
 
       if (distance <= 4) {
-        document.querySelector('.image-gallery-fullscreen-button').click()
+        // document.querySelector('.image-gallery-fullscreen-button').click()
+        const mainImages = document.querySelectorAll('.react-transform-component')
+        for(let i of mainImages){
+          console.log(i)
+          i.style.transform = 'translate(0px, 0px) scale(1);'
+        }
       }
 
       setStartPosition(null);
     }
   };
-    // const { zoomIn, zoomOut, resetTransform } = useControls();
-  
+
+  const [rotationEnabled, setRotationEnabled] = useState(false);
+
+  const toggleRotation = () => {
+    setRotationEnabled(prevState => !prevState);
+    if (window.screen.orientation) {
+      if (rotationEnabled && window.screen.orientation.lock) {
+        window.screen.orientation.lock("portrait-primary");
+      } else if (!rotationEnabled && window.screen.orientation.unlock) {
+        window.screen.orientation.unlock();
+      }
+    } else {
+      console.error("Screen orientation API not available.");
+    }
+  };
 
   return (
     
     <section className="container flex-grow mx-auto max-w-[1200px] border-b py-5 lg:grid lg:grid-cols-2 lg:py-10 single-car-review">
       <div className="container mx-auto px-4">
         <ReactImageGallery
+          onScreenChange={handleFullScreenChange}
           lazyLoad={true}
           showBullets={false}
           showFullscreenButton={true}
@@ -67,8 +88,13 @@ const CarReview = () => {
           items={images}
           slideDuration={0}
           renderItem={(item) => (
-            <div onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+            <div 
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onClick={toggleRotation}
+            >
               <TransformWrapper
+              disabled={isFullScreen ? false : true}
               disablePadding={true}
               smooth={true}
               panning={{
@@ -79,9 +105,8 @@ const CarReview = () => {
                 step: 1
               }}
               >
-                
                 <TransformComponent>
-                  <img src={item.original} />
+                  <img src={item.original} className="gallery-main-image" />
                 </TransformComponent>
               </TransformWrapper>
             </div>
