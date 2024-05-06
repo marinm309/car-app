@@ -78,7 +78,7 @@ const CarReview = () => {
     const { resetTransform } = useControls();
     return (
       <>
-        <button style={{'display': 'hidden'}} className="res-btn" onClick={() => resetTransform(0)}>Reset</button>
+        <button style={{'display': 'none'}} className="res-btn" onClick={() => resetTransform(0)}>Reset</button>
       </>
     );
   };
