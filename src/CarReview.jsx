@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
@@ -48,12 +48,11 @@ const CarReview = () => {
       );
 
       if (distance <= 4) {
-        // document.querySelector('.image-gallery-fullscreen-button').click()
-        const mainImages = document.querySelectorAll('.react-transform-component')
-        for(let i of mainImages){
-          console.log(i)
-          i.style.transform = 'translate(0px, 0px) scale(1);'
+        const resetBtns = document.querySelectorAll('.res-btn')
+        for(let i of resetBtns){
+          i.click()
         }
+        document.querySelector('.image-gallery-fullscreen-button').click() 
       }
 
       setStartPosition(null);
@@ -75,6 +74,15 @@ const CarReview = () => {
     }
   };
 
+  const Controls = () => {
+    const { resetTransform } = useControls();
+    return (
+      <>
+        <button style={{'display': 'hidden'}} className="res-btn" onClick={() => resetTransform(0)}>Reset</button>
+      </>
+    );
+  };
+
   return (
     
     <section className="container flex-grow mx-auto max-w-[1200px] border-b py-5 lg:grid lg:grid-cols-2 lg:py-10 single-car-review">
@@ -94,6 +102,7 @@ const CarReview = () => {
             onClick={toggleRotation}
             >
               <TransformWrapper
+              ref={imgRef}
               disabled={isFullScreen ? false : true}
               disablePadding={true}
               smooth={true}
@@ -105,6 +114,7 @@ const CarReview = () => {
                 step: 1
               }}
               >
+                <Controls />
                 <TransformComponent>
                   <img src={item.original} className="gallery-main-image" />
                 </TransformComponent>
