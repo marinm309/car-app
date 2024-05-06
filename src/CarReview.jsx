@@ -102,7 +102,6 @@ const CarReview = () => {
             onClick={toggleRotation}
             >
               <TransformWrapper
-              ref={imgRef}
               disabled={isFullScreen ? false : true}
               disablePadding={true}
               smooth={true}
