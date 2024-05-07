@@ -13,16 +13,15 @@ function App() {
 
   useEffect(() => {
     // Lock the screen orientation to portrait
-    //Orientation.lockToPortrait();
+    Orientation.lockToPortrait();
 
     // Optionally, you can unlock the orientation later if needed
     // Orientation.unlockAllOrientations();
 
-    return () => {
-      Orientation.lockToPortrait();
-      // Remember to unlock the orientation when the component unmounts
-      //Orientation.unlockAllOrientations();
-    };
+    // return () => {
+    //   // Remember to unlock the orientation when the component unmounts
+    //   Orientation.unlockAllOrientations();
+    // };
   }, []);
 
   return (
