@@ -10,18 +10,15 @@ import SingleCategory from './SingleCategory';
 import ContactForm from './ContactForm';
 
 function App() {
-
+  
   useEffect(() => {
-    // Lock the screen orientation to portrait
+    // Lock the screen orientation to portrait when the component mounts
     Orientation.lockToPortrait();
 
-    // Optionally, you can unlock the orientation later if needed
-    // Orientation.unlockAllOrientations();
-
-    // return () => {
-    //   // Remember to unlock the orientation when the component unmounts
-    //   Orientation.unlockAllOrientations();
-    // };
+    // Return a cleanup function to unlock the orientation when the component unmounts
+    return () => {
+      Orientation.unlockAllOrientations();
+    };
   }, []);
 
   return (
