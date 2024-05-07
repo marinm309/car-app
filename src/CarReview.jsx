@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
@@ -59,21 +59,6 @@ const CarReview = () => {
     }
   };
 
-  const [rotationEnabled, setRotationEnabled] = useState(false);
-
-  const toggleRotation = () => {
-    setRotationEnabled(prevState => !prevState);
-    if (window.screen.orientation) {
-      if (rotationEnabled && window.screen.orientation.lock) {
-        window.screen.orientation.lock("portrait-primary");
-      } else if (!rotationEnabled && window.screen.orientation.unlock) {
-        window.screen.orientation.unlock();
-      }
-    } else {
-      console.error("Screen orientation API not available.");
-    }
-  };
-
   const Controls = () => {
     const { resetTransform } = useControls();
     return (
@@ -99,7 +84,6 @@ const CarReview = () => {
             <div 
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
-            onClick={toggleRotation}
             >
               <TransformWrapper
               disabled={isFullScreen ? false : true}

@@ -87,7 +87,7 @@ const carInfo = {
     18: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 24,
+        imagesCount: 22,
     },
     19: {
         brand: 'Mercedes',
