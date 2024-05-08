@@ -507,7 +507,19 @@ form {
   }
 
   .bookmarks-container{
-    gap: 15px;
+    gap: 35px;
+  }
+
+  footer{
+    height: 9%;
+  }
+
+  .bookmarks-container p{
+    font-size: 10px;
+  }
+
+  .bookmarks-container img{
+    height: 100px;
   }
 }
 
