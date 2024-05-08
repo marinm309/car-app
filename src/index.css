@@ -115,7 +115,7 @@ nav ul li a:hover {
   gap: 20px;
   padding-bottom: 70px;
   justify-content: start;
-  margin: 0 !important;
+  margin: 0;
 }
 
 .catalog-container li{
@@ -501,6 +501,16 @@ form {
   }
 }
 
+@media only screen and (orientation: landscape){
+  .catalog-container{
+    margin-top: 34px;
+  }
+
+  .bookmarks-container{
+    gap: 15px;
+  }
+}
+
 @media only screen and (orientation: landscape) and (max-height: 720px) {
   .categories{
     flex-direction: row;
@@ -509,6 +519,6 @@ form {
 
   .categories a{
     width: 47%;
-    height: 44%;
+    height: 38%;
   }
 }
