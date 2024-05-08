@@ -355,7 +355,7 @@ form {
   z-index: 1;
 }
 
-.bookmarks-container img{
+.bookmarks-container .rotate-img{
   height: 135px;
   transform: rotate(270deg);
   position: absolute;
@@ -364,6 +364,15 @@ form {
 
 .for-space{
   width: 150px;
+}
+
+.logo-img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: none;
+  vertical-align: middle;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -484,30 +493,49 @@ form {
 
   .bookmarks-container{
     gap: 50px;
-    font-size: 9px;
   }
 
   .bookmarks-container li{
-    width: 62px;
-    height: 30px;
+    width: 78px;
+    height: 40px;
   }
 
-  .bookmarks-container img{
-    height: 80px;
+  .bookmarks-container .rotate-img{
+    height: 100px;
   }
 
   .for-space{
     width: 100px;
   }
+
+  .logo-img{
+    display: block;
+  }
+
+  .bookmarks-container p{
+    display: none;
+  }
 }
 
-@media only screen and (orientation: landscape){
+@media only screen and (orientation: landscape) and (max-height: 720px) {
+  .categories{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .categories a{
+    width: 47%;
+    height: 44%;
+  }
+
   .catalog-container{
     margin-top: 34px;
   }
 
   .bookmarks-container{
-    gap: 35px;
+    gap: 10px;
   }
 
   footer{
@@ -518,19 +546,7 @@ form {
     font-size: 10px;
   }
 
-  .bookmarks-container img{
+  .bookmarks-container .rotate-img{
     height: 100px;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-height: 720px) {
-  .categories{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .categories a{
-    width: 47%;
-    height: 38%;
   }
 }

@@ -13,10 +13,10 @@ function SingleCategory(){
     return (
         <div className="single-category-container">
             <ul className="bookmarks-container">
-                <li><Link to={'/category/buick'}><p>Buick</p></Link><img src={'/bookmark.png'}></img></li>
-                <li><Link to={'/category/cadillac'}><p>Cadillac</p></Link><img src={'/bookmark.png'}></img></li>
-                <li><Link to={'/category/mercedes'}><p>Mercedes</p></Link><img src={'/bookmark.png'}></img></li>
-                <li><Link to={'/category/others'}><p>Other</p></Link><img src={'/bookmark.png'}></img></li>
+                <li><Link to={'/category/buick'}><p>Buick</p><img className="logo-img" src={'/buick-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
+                <li><Link to={'/category/cadillac'}><p>Cadillac</p><img className="logo-img" src={'/cadillac-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
+                <li><Link to={'/category/mercedes'}><p>Mercedes</p><img className="logo-img" src={'/mercedes-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
+                <li><Link to={'/category/others'}><p>Other</p><img className="logo-img" src={'/mercedes-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
             </ul>
             <div className="for-space"></div>
             <ul className="catalog-container container">
