@@ -522,6 +522,11 @@ form {
 }
 
 @media only screen and (orientation: landscape){
+  body{
+    overflow: auto;
+    height: auto;
+  }
+
   .logo-img{
     display: block;
   }
@@ -540,6 +545,10 @@ form {
 }
 
 @media only screen and (orientation: landscape) and (max-height: 720px) {
+  .category h2{
+    padding: 0;
+  }
+
   .bookmarks-container li{
     width: 78px;
     height: 40px;
@@ -560,7 +569,7 @@ form {
 
   .categories a{
     width: 47%;
-    height: 44%;
+    height: 100%;
   }
 
   .catalog-container{
