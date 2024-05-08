@@ -534,8 +534,8 @@ form {
     display: none;
   }
 
-  header{
-    height: 4%;
+  .whole-nav-container .container{
+    padding: 5px 0;
   }
 }
 
