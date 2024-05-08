@@ -515,6 +515,10 @@ form {
   .bookmarks-container p{
     display: none;
   }
+
+  .rotate-img{
+    display: none;
+  }
 }
 
 @media only screen and (orientation: landscape){
@@ -524,6 +528,14 @@ form {
 
   .bookmarks-container p{
     display: none;
+  }
+
+  .rotate-img{
+    display: none;
+  }
+
+  header{
+    height: 4%;
   }
 }
 
@@ -536,8 +548,10 @@ form {
   .bookmarks-container .rotate-img{
     height: 100px;
   }
-  
+
   .categories{
+    margin-top: 20px;
+    height: 86%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
