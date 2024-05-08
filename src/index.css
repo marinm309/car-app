@@ -500,3 +500,15 @@ form {
     width: 100px;
   }
 }
+
+@media only screen and (orientation: landscape) and (max-height: 720px) {
+  .categories{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .categories a{
+    width: 47%;
+    height: 44%;
+  }
+}
