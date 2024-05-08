@@ -560,6 +560,7 @@ form {
 
   .categories{
     margin-top: 20px;
+    margin-bottom: 40px;
     height: 86%;
     flex-direction: row;
     flex-wrap: wrap;
