@@ -517,7 +517,26 @@ form {
   }
 }
 
+@media only screen and (orientation: landscape){
+  .logo-img{
+    display: block;
+  }
+
+  .bookmarks-container p{
+    display: none;
+  }
+}
+
 @media only screen and (orientation: landscape) and (max-height: 720px) {
+  .bookmarks-container li{
+    width: 78px;
+    height: 40px;
+  }
+
+  .bookmarks-container .rotate-img{
+    height: 100px;
+  }
+  
   .categories{
     flex-direction: row;
     flex-wrap: wrap;
