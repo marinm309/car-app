@@ -52,9 +52,12 @@ const CarReview = () => {
         for(let i of resetBtns){
           i.click()
         }
-        // document.querySelector('.image-gallery-fullscreen-button').click() 
-        // document.querySelector('.fullscreen').style.width = '100vw'
-        // document.querySelector('.fullscreen').style.height = '100vh'
+        document.querySelector('.image-gallery-fullscreen-button').click()
+        setTimeout(() => {
+          const dynamicElement = document.querySelector('.fullscreen .image-gallery-thumbnails-wrapper');
+          const dynamicHeight = dynamicElement ? dynamicElement.offsetHeight : undefined;
+          document.documentElement.style.setProperty('--dynamic-height', `${dynamicHeight}px`);
+        }, 10)
       }
 
       setStartPosition(null);
@@ -88,6 +91,9 @@ const CarReview = () => {
             onMouseUp={handleMouseUp}
             >
               <TransformWrapper
+              doubleClick={{
+                disabled: true
+              }}
               disabled={isFullScreen ? false : true}
               disablePadding={true}
               smooth={true}
