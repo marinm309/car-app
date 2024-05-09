@@ -186,12 +186,12 @@ nav ul li a:hover {
 }
 
 .image-gallery-thumbnail{
-  width: 16%;
+  width: 20%;
 }
 
 .image-gallery-thumbnails-container img{
   max-width: 100%;
-  height: 70px;
+  height: 74px;
 }
 
 .image-gallery-slide-wrapper img{
@@ -375,6 +375,12 @@ form {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1400px) {
+  .image-gallery-thumbnails-container img{
+    height: 58px;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .footer-container div {
     min-width: 50%;
@@ -382,6 +388,10 @@ form {
 }
 
 @media only screen and (max-width: 1199px) {
+  .image-gallery-thumbnails-container img{
+    height: 42px;
+  }
+
   .categories a {
     width: 48%;
   }
@@ -396,6 +406,10 @@ form {
 }
 
 @media only screen and (max-width: 991px) {
+  .image-gallery-thumbnails-container img{
+    height: 74px;
+  }
+
   .single-car-review{
     display: flex;
     flex-direction: column;
@@ -483,6 +497,10 @@ form {
 }
 
 @media only screen and (max-width: 500px) {
+  .image-gallery-thumbnails-container img{
+    height: auto;
+  }
+
   .footer-container div {
     min-width: 100%;
   }
@@ -525,18 +543,6 @@ form {
   body{
     overflow: auto;
     height: auto;
-  }
-
-  .logo-img{
-    display: block;
-  }
-
-  .bookmarks-container p{
-    display: none;
-  }
-
-  .rotate-img{
-    display: none;
   }
 
   .whole-nav-container .container{

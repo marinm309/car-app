@@ -52,7 +52,9 @@ const CarReview = () => {
         for(let i of resetBtns){
           i.click()
         }
-        document.querySelector('.image-gallery-fullscreen-button').click() 
+        // document.querySelector('.image-gallery-fullscreen-button').click() 
+        // document.querySelector('.fullscreen').style.width = '100vw'
+        // document.querySelector('.fullscreen').style.height = '100vh'
       }
 
       setStartPosition(null);
