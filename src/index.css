@@ -376,6 +376,10 @@ form {
   margin: 0 auto;
 }
 
+.image-gallery-fullscreen-button{
+  display: none;
+}
+
 @media only screen and (max-width: 1300px) {
   .footer-container div {
     min-width: 50%;

@@ -193,7 +193,7 @@ const categoriesInfo = [
     },
     {
         id: 33,
-        name: 'Others',
+        name: 'Cadillac',
         title: '',
         sub: '',
     },

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
@@ -22,10 +22,18 @@ const CarReview = () => {
 
   const [isFullScreen, setIsFullScreen] = useState(false);
 
+  const galleryRef = useRef(null)
+
   const handleFullScreenChange = () => {
     setIsFullScreen(document.fullscreenElement !== null);
+    const dynamicElement = document.querySelector('.image-gallery-thumbnails-wrapper');
+    dynamicElement.style.display = dynamicElement.style.display != 'none' ? 'none' : 'block'
+    const resetBtns = document.querySelectorAll('.res-btn')
+      for(let i of resetBtns){
+        i.click()
+      }
   };
-  
+
   const [startPosition, setStartPosition] = useState(null);
 
   const handleMouseDown = (event) => {
@@ -48,18 +56,8 @@ const CarReview = () => {
       );
 
       if (distance <= 4) {
-        const resetBtns = document.querySelectorAll('.res-btn')
-        for(let i of resetBtns){
-          i.click()
-        }
-        document.querySelector('.image-gallery-fullscreen-button').click()
-        setTimeout(() => {
-          const dynamicElement = document.querySelector('.fullscreen .image-gallery-thumbnails-wrapper');
-          const dynamicHeight = dynamicElement ? dynamicElement.offsetHeight : undefined;
-          document.documentElement.style.setProperty('--dynamic-height', `${dynamicHeight}px`);
-        }, 10)
+        galleryRef.current.toggleFullScreen()
       }
-
       setStartPosition(null);
     }
   };
@@ -68,7 +66,7 @@ const CarReview = () => {
     const { resetTransform } = useControls();
     return (
       <>
-        <button style={{'display': 'none'}} className="res-btn" onClick={() => resetTransform(0)}>Reset</button>
+        <button style={{'display': 'none'}} className="res-btn" onClick={() => resetTransform(10)}>Reset</button>
       </>
     );
   };
@@ -78,6 +76,7 @@ const CarReview = () => {
     <section className="container flex-grow mx-auto max-w-[1200px] border-b py-5 lg:grid lg:grid-cols-2 lg:py-10 single-car-review">
       <div className="container mx-auto px-4">
         <ReactImageGallery
+          ref={galleryRef}
           onScreenChange={handleFullScreenChange}
           lazyLoad={true}
           showBullets={false}
