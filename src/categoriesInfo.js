@@ -287,6 +287,24 @@ const categoriesInfo = [
         title: '',
         sub: '',
     },
+    {
+        id: 49,
+        name: 'Buick',
+        title: '',
+        sub: '',
+    },
+    {
+        id: 50,
+        name: 'Cadillac',
+        title: '',
+        sub: '',
+    },
+    {
+        id: 51,
+        name: 'Cadillac',
+        title: '',
+        sub: '',
+    },
 ]
 
 categoriesInfo.forEach((car, index) => {

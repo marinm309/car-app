@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
 import { TransformWrapper, TransformComponent, useControls } from "react-zoom-pan-pinch";
+import MobileDetect from 'mobile-detect';
 
 const carReviews = carInfo
 
@@ -72,6 +73,8 @@ const CarReview = () => {
   };
 
   const [carInfoThirdSection, setCarInfoThirdSection] = useState(null)
+  const md = new MobileDetect(window.navigator.userAgent);
+  const isMobile = md.mobile() !== null;
   const carInfoThirdSectionObj = {
     'extras': 'Екстри',
     'history': 'Подробна история',
@@ -91,6 +94,12 @@ const CarReview = () => {
 
     if(carInfoThirdSection){
       carInfoThirdSectionElement.style.display = 'unset'
+      if (isMobile) {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
     }
     else{
       carInfoThirdSectionElement.style.display = 'none'
