@@ -198,7 +198,7 @@ nav ul li a:hover {
 }
 
 .fullscreen .image-gallery-slide-wrapper img{
-  height: calc(100vh - var(--dynamic-height));
+  height: 100vh;
 }
 
 .image-gallery-content{

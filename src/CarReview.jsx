@@ -116,13 +116,18 @@ const CarReview = () => {
       </div>
 
       <section className="car-info">
-        <h2>{carInfo.brand}</h2>
-        <p>Manufacturer: {carInfo.placeholder}</p>
-        <p>Year: {carInfo.placeholder}</p>
-        <p>Engine: {carInfo.placeholder}</p>
-        <p>Top Speed: {carInfo.placeholder}</p>
-        <p>Price: {carInfo.placeholder}</p>
-        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia, turpis sit amet dapibus vehicula, felis justo efficitur lorem, ac commodo velit sem nec sapien.</p>
+        <p><b>Марка: </b>{carInfo.brand}</p>
+        <p>Модел: {carInfo.model}</p>
+        <p>Година на производтво: {carInfo.yearMade}</p>
+        <p>Външен цвят: {carInfo.outerColor}</p>
+        <p>Вътрешен цвят: {carInfo.innerColor}</p>
+        <p>Двигател: {carInfo.engine}</p>
+        <p>Километраж: {carInfo.kilometers}</p>
+        <p>Статус: {carInfo.status}</p>
+        <p>Катастрофи: {carInfo.crashes}</p>
+        <p>Екстри</p>
+        <p>Подробна история</p>
+        <p>Цена: {carInfo.price}</p>
     </section>
     </section>
   );

@@ -1,7 +1,17 @@
 const carInfo = {
     1: {
         brand: 'Mercedes',
-        placeholder: 'Placeholder for car 1',
+        model: 'Placeholder model',
+        yearMade: 'Placeholder yearMade',
+        outerColor: 'Placeholder outerColor',
+        innerColor: 'Placeholder innerColor',
+        engine: 'Placeholder engine',
+        kilometers: 'Placeholder kilometers',
+        status: 'Placeholder status',
+        crashes: 'Placeholder crashes',
+        extras: 'Placeholder extras',
+        history: 'Placeholder history',
+        price: 'Placeholder price',
         imagesCount: 24,
     },
     2: {
@@ -27,7 +37,7 @@ const carInfo = {
     6: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 23,
+        imagesCount: 24,
     },
     7: {
         brand: 'Mercedes',
@@ -37,7 +47,7 @@ const carInfo = {
     8: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 22,
+        imagesCount: 24,
     },
     9: {
         brand: 'Mercedes',
@@ -47,12 +57,12 @@ const carInfo = {
     10: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 26,
+        imagesCount: 24,
     },
     11: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 24,
+        imagesCount: 23,
     },
     12: {
         brand: 'Cadillac',
@@ -72,17 +82,17 @@ const carInfo = {
     15: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 24,
+        imagesCount: 25,
     },
     16: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 24,
+        imagesCount: 22,
     },
     17: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 22,
+        imagesCount: 24,
     },
     18: {
         brand: 'Mercedes',
@@ -102,7 +112,7 @@ const carInfo = {
     21: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 26,
+        imagesCount: 22,
     },
     22: {
         brand: 'Mercedes',
@@ -117,7 +127,7 @@ const carInfo = {
     24: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 24,
+        imagesCount: 26,
     },
     25: {
         brand: 'Mercedes',
@@ -132,12 +142,12 @@ const carInfo = {
     27: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 25,
+        imagesCount: 24,
     },
     28: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 22,
+        imagesCount: 26,
     },
     29: {
         brand: 'Mercedes',
@@ -147,7 +157,7 @@ const carInfo = {
     30: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 24,
+        imagesCount: 25,
     },
     31: {
         brand: 'Mercedes',
@@ -162,12 +172,12 @@ const carInfo = {
     33: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 25,
+        imagesCount: 26,
     },
     34: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 26
+        imagesCount: 24
     },
     35: {
         brand: 'Mercedes',
@@ -177,7 +187,7 @@ const carInfo = {
     36: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 24,
+        imagesCount: 25,
     },
     37: {
         brand: 'Mercedes',
@@ -222,7 +232,7 @@ const carInfo = {
     45: {
         brand: 'Mercedes',
         placeholder: 'Placeholder for car 1',
-        imagesCount: 25,
+        imagesCount: 24,
     },
     46: {
         brand: 'Mercedes',
