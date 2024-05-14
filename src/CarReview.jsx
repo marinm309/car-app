@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
 import carInfo from './carInfo';
@@ -71,10 +71,35 @@ const CarReview = () => {
     );
   };
 
+  const [carInfoThirdSection, setCarInfoThirdSection] = useState(null)
+  const carInfoThirdSectionObj = {
+    'extras': 'Екстри',
+    'history': 'Подробна история',
+  }
+
+  const carInfoHandler = (event) => {
+    if(carInfoThirdSection && carInfoThirdSection == event.currentTarget.id){
+      setCarInfoThirdSection(null)
+    }
+    else{
+      setCarInfoThirdSection(event.currentTarget.id)
+    }
+  }
+
+  useEffect(() => {
+    const carInfoThirdSectionElement = document.querySelector('.car-info-pop-up')
+
+    if(carInfoThirdSection){
+      carInfoThirdSectionElement.style.display = 'unset'
+    }
+    else{
+      carInfoThirdSectionElement.style.display = 'none'
+    }
+  },[carInfoThirdSection])
+
   return (
-    
-    <section className="container flex-grow mx-auto max-w-[1200px] border-b py-5 lg:grid lg:grid-cols-2 lg:py-10 single-car-review">
-      <div className="container mx-auto px-4">
+    <section className="container flex-grow max-w-[1200px] border-b py-5 lg:grid lg:grid-cols-2 lg:py-10 single-car-review">
+      <div className="container mx-auto px-4 car-info-gallery-container">
         <ReactImageGallery
           ref={galleryRef}
           onScreenChange={handleFullScreenChange}
@@ -117,18 +142,24 @@ const CarReview = () => {
 
       <section className="car-info">
         <p><b>Марка: </b>{carInfo.brand}</p>
-        <p>Модел: {carInfo.model}</p>
-        <p>Година на производтво: {carInfo.yearMade}</p>
-        <p>Външен цвят: {carInfo.outerColor}</p>
-        <p>Вътрешен цвят: {carInfo.innerColor}</p>
-        <p>Двигател: {carInfo.engine}</p>
-        <p>Километраж: {carInfo.kilometers}</p>
-        <p>Статус: {carInfo.status}</p>
-        <p>Катастрофи: {carInfo.crashes}</p>
-        <p>Екстри</p>
-        <p>Подробна история</p>
-        <p>Цена: {carInfo.price}</p>
+        <p><b>Модел:</b> {carInfo.model}</p>
+        <p><b>Година на производтво:</b> {carInfo.yearMade}</p>
+        <p><b>Външен цвят:</b> {carInfo.outerColor}</p>
+        <p><b>Вътрешен цвят:</b> {carInfo.innerColor}</p>
+        <p><b>Двигател:</b> {carInfo.engine}</p>
+        <p><b>Километраж:</b> {carInfo.kilometers}</p>
+        <p><b>Статус:</b> {carInfo.status}</p>
+        <p><b>Катастрофи:</b> {carInfo.crashes}</p>
+        <p><button className="car-info-btn" id="extras" onClick={carInfoHandler}><b><i>Екстри</i></b></button></p>
+        <p><button className="car-info-btn" id="history" onClick={carInfoHandler}><b><i>Подробна история</i></b></button></p>
+        <p><b>Цена:</b> {carInfo.price}</p>
     </section>
+
+    <div className="car-info-pop-up">
+      <h2>{carInfoThirdSection ? carInfoThirdSectionObj[carInfoThirdSection] : ''}</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis repellendus illo veniam aliquid repellat doloribus non, et facilis officiis, rerum facere fuga. Repellendus at, quos repellat harum laboriosam aliquid!</p>
+    </div>
+
     </section>
   );
 };

@@ -171,6 +171,7 @@ nav ul li a:hover {
 
 .car-info {
   margin: 20px;
+  width: 20%;
 }
 
 .car-info h2 {
@@ -206,6 +207,13 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.single-car-review{
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: start;
+  max-width: 1600px;
 }
 
 .single-car-review img{
@@ -380,9 +388,39 @@ form {
   display: none;
 }
 
+.car-info-btn{
+  border: none;
+  padding: unset;
+  text-decoration: underline;
+}
+
+.car-info-gallery-container{
+  width: 56%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.car-info-pop-up{
+  width: 20%;
+  border-left: 1px solid black;
+  padding-left: 10px;
+}
+
 @media only screen and (max-width: 1300px) {
   .footer-container div {
     min-width: 50%;
+  }
+
+  .car-info-gallery-container{
+    width: 50%;
+  }
+
+  .car-info{
+    width: 28%;
+  }
+
+  .car-info-pop-up{
+    width: 16%;
   }
 }
 
@@ -401,6 +439,28 @@ form {
 }
 
 @media only screen and (max-width: 991px) {
+  .car-info-gallery-container{
+    width: 100%;
+  }
+
+  .car-info{
+    width: 100%;
+    max-width: 720px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .car-info-pop-up{
+    width: 100%;
+    margin-bottom: 40px;
+    max-width: 720px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+  }
+
   .single-car-review{
     display: flex;
     flex-direction: column;
