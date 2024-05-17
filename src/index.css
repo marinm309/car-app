@@ -407,6 +407,15 @@ form {
   padding-left: 10px;
 }
 
+.nav-container{
+  position: relative;
+}
+
+.lang-btn{
+  position: absolute;
+  right: 0;
+}
+
 @media only screen and (max-width: 1300px) {
   .footer-container div {
     min-width: 50%;
@@ -549,6 +558,10 @@ form {
 
   .contactForm-wrapper{
     width: 80%;
+  }
+
+  .lang-btn{
+    right: 20px;
   }
 }
 

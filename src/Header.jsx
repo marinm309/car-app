@@ -8,7 +8,7 @@ function Header(){
     return(
         <header>
             <div className="whole-nav-container">
-                <div className="container">
+                <div className="container nav-container">
                 {currentLanguage === 'en' ? (
                         <>
                             <h4 className="header-msg-1"><i><b>Gathered in one place, cars for connoisseurs and enthusiasts!</b></i></h4>
@@ -20,7 +20,7 @@ function Header(){
                             <h4 className="header-msg-2"><i><b>Вечните класики!</b></i></h4>
                         </>
                     )}
-                    <button onClick={toggleLanguage}>{currentLanguage === 'en' ? 'BG' : 'EN'}</button>
+                    <button className="lang-btn" onClick={toggleLanguage}>{currentLanguage === 'en' ? 'BG' : 'EN'}</button>
                 </div>
             </div>
         </header>
