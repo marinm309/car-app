@@ -1,16 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactImageGallery from "react-image-gallery";
-import carInfo from './carInfo';
 import { TransformWrapper, TransformComponent, useControls } from "react-zoom-pan-pinch";
 import MobileDetect from 'mobile-detect';
 
-const carReviews = carInfo
+import { LanguageContext } from './LanguageContext';
+import carsInfo from './carsInfo';
 
 const CarReview = () => {
 
+  const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext)
+
   const { carId } = useParams();
-  const carInfo = carReviews[carId];
+  const carInfo = carsInfo[carId];
 
   const imagesCount = carInfo.imagesCount
   
@@ -76,8 +78,8 @@ const CarReview = () => {
   const md = new MobileDetect(window.navigator.userAgent);
   const isMobile = md.mobile() !== null;
   const carInfoThirdSectionObj = {
-    'extras': 'Екстри',
-    'history': 'Подробна история',
+    'extras': currentLanguage == 'bg' ? 'Екстри' : 'Extras',
+    'history': currentLanguage == 'bg' ? 'Подробна история' : 'Detailed history',
   }
 
   const carInfoHandler = (event) => {
@@ -149,7 +151,7 @@ const CarReview = () => {
 
       </div>
 
-      <section className="car-info">
+          {currentLanguage == 'bg' ? (<><section className="car-info">
         <p><b>Марка: </b>{carInfo.brand}</p>
         <p><b>Модел:</b> {carInfo.model}</p>
         <p><b>Година на производтво:</b> {carInfo.yearMade}</p>
@@ -166,8 +168,26 @@ const CarReview = () => {
 
     <div className="car-info-pop-up">
       <h2>{carInfoThirdSection ? carInfoThirdSectionObj[carInfoThirdSection] : ''}</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis repellendus illo veniam aliquid repellat doloribus non, et facilis officiis, rerum facere fuga. Repellendus at, quos repellat harum laboriosam aliquid!</p>
-    </div>
+      <p>{carInfo[carInfoThirdSection]}</p>
+    </div></>) : (<><section className="car-info">
+        <p><b>Manufacturer: </b>{carInfo.brand}</p>
+        <p><b>Model:</b> {carInfo.model}</p>
+        <p><b>Year of manufacture:</b> {carInfo.yearMade}</p>
+        <p><b>Outer color:</b> {carInfo.outerColor}</p>
+        <p><b>Inner color:</b> {carInfo.innerColor}</p>
+        <p><b>Engine:</b> {carInfo.engine}</p>
+        <p><b>Mileage:</b> {carInfo.kilometers}</p>
+        <p><b>Status:</b> {carInfo.status}</p>
+        <p><b>Crashes:</b> {carInfo.crashes}</p>
+        <p><button className="car-info-btn" id="extras" onClick={carInfoHandler}><b><i>Extras</i></b></button></p>
+        <p><button className="car-info-btn" id="history" onClick={carInfoHandler}><b><i>Detailed history</i></b></button></p>
+        <p><b>Price:</b> {carInfo.price}</p>
+    </section>
+
+    <div className="car-info-pop-up">
+      <h2>{carInfoThirdSection ? carInfoThirdSectionObj[carInfoThirdSection] : ''}</h2>
+      <p>{carInfo[carInfoThirdSection]}</p>
+    </div></>)}
 
     </section>
   );

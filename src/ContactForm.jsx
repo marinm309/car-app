@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 
+import { LanguageContext } from './LanguageContext';
+
 const ContactForm = () => {
+
+  const {currentLanguage, toggleLanguage} = useContext(LanguageContext)
+
   const {
     register,
     handleSubmit,
@@ -57,11 +62,11 @@ const ContactForm = () => {
       );
 
       // Display success alert
-      toggleAlert('Формата беше изпратена успешно!', 'success');
+      toggleAlert(currentLanguage == 'bg' ? 'Формата беше изпратена успешно!' : 'Form submitted successfully!', 'success');
     } catch (e) {
       console.error(e);
       // Display error alert
-      toggleAlert('Възникна проблем при изпращането на формата, моля опитайте отново', 'danger');
+      toggleAlert(currentLanguage == 'bg' ? 'Възникна проблем при изпращането на формата, моля опитайте отново.' : 'There was a problem submitting the form, please try again.', 'danger');
     } finally {
       // Re-enable form submission
       setDisabled(false);
@@ -72,7 +77,7 @@ const ContactForm = () => {
 
   return (
     <div className='ContactForm container'>
-    <h2><b>ПОПЪЛНЕТЕ ДАННИТЕ И НИЕ ЩЕ СЕ СВЪРЖЕМ С ВАС</b></h2>
+      {currentLanguage == 'bg' ? (<>    <h2><b>ПОПЪЛНЕТЕ ДАННИТЕ И НИЕ ЩЕ СЕ СВЪРЖЕМ С ВАС</b></h2>
       <div className='contactForm-wrapper'>
         <div className='row'>
           <div className='col-12 text-center'>
@@ -211,8 +216,148 @@ const ContactForm = () => {
               setAlertInfo({ display: false, message: '', type: '' })
             } // Clear the alert when close button is clicked
           ></button>
+        </div> //ENGLISH PART
+      )}</>) : (<>    <h2><b>FILL IN THE DETAILS AND WE WILL CONTACT YOU</b></h2>
+      <div className='contactForm-wrapper'>
+        <div className='row'>
+          <div className='col-12 text-center'>
+            <div className='contactForm'>
+              <form
+                id='contact-form'
+                onSubmit={handleSubmit(onSubmit)}
+                noValidate
+              >
+                {/* Row 1 of form */}
+                <div className='row formRow'>
+                  <div className='col'>
+                    <input
+                      type='text'
+                      name='name'
+                      {...register('name', {
+                        required: {
+                          value: true,
+                          message: 'Please enter a name',
+                        },
+                        maxLength: {
+                          value: 30,
+                          message: 'Please use up to 30 characters',
+                        },
+                      })}
+                      className='form-control formInput'
+                      placeholder='Name'
+                    ></input>
+                    {errors.name && (
+                      <span className='errorMessage'>
+                        {errors.name.message}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="row formRow">
+                  <div className='col'>
+                      <input
+                        type='text'
+                        name='email'
+                        {...register('email', {
+                          required: {
+                            value: true,
+                            message: 'Please enter an email or phone number',
+                          },
+                          maxLength: {
+                            value: 30,
+                            message: 'Please use up to 30 characters',
+                          },
+                        })}
+                        className='form-control formInput'
+                        placeholder='Email/Phone number'
+                      ></input>
+                      {errors.email && (
+                        <span className='errorMessage'>
+                          {errors.email.message}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                {/* Row 2 of form */}
+                <div className='row formRow'>
+                  <div className='col'>
+                    <input
+                      type='number'
+                      name='subject'
+                      {...register('subject', {
+                        required: {
+                          value: true,
+                          message: 'Please enter a car number',
+                        },
+                        maxLength: {
+                          value: 5,
+                          message: 'Please use up to 5 characters',
+                        },
+                      })}
+                      className='form-control formInput'
+                      placeholder='Please enter a car number'
+                    ></input>
+                    {errors.subject && (
+                      <span className='errorMessage'>
+                        {errors.subject.message}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                {/* Row 3 of form */}
+                <div className='row formRow'>
+                  <div className='col'>
+                    <textarea
+                      rows={3}
+                      name='message'
+                      {...register('message', {
+                        maxLength: {
+                          value: 100,
+                          message: 'Please use up to 100 characters',
+                        },
+                      })}
+                      className='form-control formInput'
+                      placeholder='Please add a question if you have one'
+                    ></textarea>
+                    {errors.message && (
+                      <span className='errorMessage'>
+                        {errors.message.message}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="form-buttons-container">
+                  <button
+                    className='submit-btn btn btn-primary'
+                    disabled={disabled}
+                    type='submit'
+                  >
+                    Send
+                  </button>
+                  <Link to={'/'}><u><i>Home</i></u></Link>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-      )}
+      </div>
+      {alertInfo.display && (
+        <div
+          className={`alert alert-${alertInfo.type} alert-dismissible mt-5`}
+          role='alert'
+        >
+          {alertInfo.message}
+          <button
+            type='button'
+            className='btn-close'
+            data-bs-dismiss='alert'
+            aria-label='Close'
+            onClick={() =>
+              setAlertInfo({ display: false, message: '', type: '' })
+            } // Clear the alert when close button is clicked
+          ></button>
+        </div>
+      )}</>)}
     </div>
   );
 };

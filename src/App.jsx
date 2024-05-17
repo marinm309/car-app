@@ -9,24 +9,23 @@ import SingleCategory from './SingleCategory';
 import ContactForm from './ContactForm';
 
 function App() {
-
   return (
-    <Router>
-      <div>
-        
-        <Header />
+        <Router>
+            <div>
+                
+                <Header />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/car/:carId" element={<CarReview />} />
-          <Route path="/category/:carCategory" element={<SingleCategory />}></Route>
-          <Route path="/contact" element={<ContactForm />}></Route>
-        </Routes>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/car/:carId" element={<CarReview />} />
+                    <Route path="/category/:carCategory" element={<SingleCategory />}></Route>
+                    <Route path="/contact" element={<ContactForm />}></Route>
+                </Routes>
 
-        <Footer />
+                <Footer />
 
-      </div>
-    </Router>
+            </div>
+        </Router>
   );
 }
 

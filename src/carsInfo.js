@@ -1,5 +1,20 @@
-const carInfo = {
+const carsInfo = 1 ? {
     1: {
+        brand: 'Mercedes',
+        model: 'Placeholder model',
+        yearMade: 'Placeholder yearMade',
+        outerColor: 'Placeholder outerColor',
+        innerColor: 'Placeholder innerColor',
+        engine: 'Placeholder engine',
+        kilometers: 'Placeholder kilometers',
+        status: 'Placeholder status',
+        crashes: 'Placeholder crashes',
+        extras: 'Плейсхолдър дас дас дас д асдаскйдкоас йдаскл йдкласйдклсайд класйдклсайдклс айд с дусгхд хигсдхйагайсхдфгсдх йагфсдх йгф сдхйагфй сдгахйфг кхйдсгфхй сдгйахф гхйкдс гйкфхсдагкфхйасдгхйкфгсдк фгксдгфкйасдхг фйксдх фгсдхй гфсдхйа гфхйасдг ',
+        history: 'дйкласд йклас йдсайд асйлкд йасклд йлкас йдкласйд класйд класд йкласйд класйд класйд класй дкласйд класйд клсайд клхафйклсгфйлхдфг йлхасфгх йкасдгф кхйасдфгх йкасд фгхйкдасг фйкасдхгф йасдх й сдфх йксдфх йклдфх йкласхйклсдф хйкдф хйклдф хлдф йксхй',
+        price: 'Placeholder price',
+        imagesCount: 24,
+    },
+    2: {
         brand: 'Mercedes',
         model: 'Placeholder model',
         yearMade: 'Placeholder yearMade',
@@ -11,6 +26,22 @@ const carInfo = {
         crashes: 'Placeholder crashes',
         extras: 'Placeholder extras',
         history: 'Placeholder history',
+        price: 'Placeholder price',
+        imagesCount: 24,
+    },
+} : {
+    1: {
+        brand: 'Mercedes',
+        model: 'Placeholder model',
+        yearMade: 'Placeholder yearMade',
+        outerColor: 'Placeholder outerColor',
+        innerColor: 'Placeholder innerColor',
+        engine: 'Placeholder engine',
+        kilometers: 'Placeholder kilometers',
+        status: 'Placeholder status',
+        crashes: 'Placeholder crashes',
+        extras: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis repellendus illo veniam aliquid repellat doloribus non, et facilis officiis, rerum facere fuga. Repellendus at, quos repellat harum laboriosam aliquid!',
+        history: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis repellendus illo veniam aliquid repellat doloribus non, et facilis officiis, rerum facere fuga. Repellendus at, quos repellat harum laboriosam aliquid!',
         price: 'Placeholder price',
         imagesCount: 24,
     },
@@ -766,4 +797,4 @@ const carInfo = {
     },
 }
 
-export default carInfo
+export default carsInfo

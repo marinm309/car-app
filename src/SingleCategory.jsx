@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom';
+
 import categoriesInfo from './categoriesInfo';
+import { LanguageContext } from './LanguageContext';
 
 const cars = categoriesInfo
 
 function SingleCategory(){
+
+    const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext)
 
     const { carCategory } = useParams();
     const filteredCars = cars.filter(car => car.name.toLowerCase() == carCategory)
@@ -16,7 +20,7 @@ function SingleCategory(){
                 <li><Link to={'/category/buick'}><p>Buick</p><img className="logo-img" src={'/buick-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
                 <li><Link to={'/category/cadillac'}><p>Cadillac</p><img className="logo-img" src={'/cadillac-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
                 <li><Link to={'/category/mercedes'}><p>Mercedes</p><img className="logo-img" src={'/mercedes-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
-                <li><Link to={'/category/others'}><p>Other</p><img className="logo-img" src={'/mercedes-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
+                <li><Link to={'/category/others'}><p>{currentLanguage == 'bg' ? 'Други' : 'Other'}</p><img className="logo-img" src={'/other-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
             </ul>
             <div className="for-space"></div>
             <ul className="catalog-container container">
