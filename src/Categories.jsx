@@ -5,7 +5,7 @@ import { LanguageContext } from "./LanguageContext"
 
 function Categories(){
 
-    const {currentLanguage, toggleLanguage} = useContext(LanguageContext)
+    const { currentLanguage } = useContext(LanguageContext)
 
     const categories = [
         {id: 1, img: 'https://dk-car-app.s3.eu-central-1.amazonaws.com/18/DK+Cars+18-2.jpg', brand: 'Buick', link: 'buick'},

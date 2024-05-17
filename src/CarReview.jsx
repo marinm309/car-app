@@ -9,10 +9,10 @@ import carsInfo from './carsInfo';
 
 const CarReview = () => {
 
-  const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext)
+  const { currentLanguage } = useContext(LanguageContext)
 
   const { carId } = useParams();
-  const carInfo = carsInfo[carId];
+  const carInfo = carsInfo[currentLanguage][carId];
 
   const imagesCount = carInfo.imagesCount
   

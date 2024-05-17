@@ -7,7 +7,7 @@ import { LanguageContext } from './LanguageContext';
 
 const ContactForm = () => {
 
-  const {currentLanguage, toggleLanguage} = useContext(LanguageContext)
+  const { currentLanguage } = useContext(LanguageContext)
 
   const {
     register,

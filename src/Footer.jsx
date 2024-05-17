@@ -4,7 +4,7 @@ import { LanguageContext } from './LanguageContext';
 
 function Footer(){
 
-    const {currentLanguage, toggleLanguage} = useContext(LanguageContext)
+    const { currentLanguage } = useContext(LanguageContext)
 
     const location = useLocation();
 

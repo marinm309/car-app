@@ -9,7 +9,7 @@ const cars = categoriesInfo
 
 function SingleCategory(){
 
-    const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext)
+    const { currentLanguage } = useContext(LanguageContext)
 
     const { carCategory } = useParams();
     const filteredCars = cars.filter(car => car.name.toLowerCase() == carCategory)
