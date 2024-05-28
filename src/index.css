@@ -412,8 +412,12 @@ form {
 }
 
 .lang-btn{
+  border: none;
+  border-radius: 10px;
+  color: rgb(3, 129, 187);
   position: absolute;
   right: 0;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -601,6 +605,15 @@ form {
 
   .rotate-img{
     display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .lang-btn{
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    right: 5px;
   }
 }
 

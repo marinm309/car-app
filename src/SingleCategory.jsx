@@ -20,7 +20,7 @@ function SingleCategory(){
                 <li><Link to={'/category/buick'}><p>Buick</p><img className="logo-img" src={'/buick-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
                 <li><Link to={'/category/cadillac'}><p>Cadillac</p><img className="logo-img" src={'/cadillac-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
                 <li><Link to={'/category/mercedes'}><p>Mercedes</p><img className="logo-img" src={'/mercedes-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
-                <li><Link to={'/category/others'}><p>{currentLanguage == 'bg' ? 'Други' : 'Other'}</p><img className="logo-img" src={'/other-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
+                <li><Link to={'/category/others'}><p>{currentLanguage == 'bg' ? 'Други' : 'Other'}</p><img style={{'width': '80px', 'height': '80px'}} className="logo-img" src={'/other-logo.png'} /></Link><img className="rotate-img" src={'/bookmark.png'}></img></li>
             </ul>
             <div className="for-space"></div>
             <ul className="catalog-container container">
